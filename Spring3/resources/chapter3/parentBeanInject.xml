@@ -9,7 +9,7 @@
            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <!--注意此处可能子容器也定义一个该Bean-->
-    <bean id="helloApi" class="cn.javass.spring.chapter3.HelloImpl4">
+    <bean id="helloApi" class="com.ligh.spring3.chapter3.HelloImpl4">
         <property name="index" value="1"/>
         <property name="message" value="Hello Parent!"/>
     </bean>

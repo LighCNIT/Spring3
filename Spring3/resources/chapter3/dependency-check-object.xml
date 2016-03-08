@@ -5,10 +5,10 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
            
-    <bean id="helloApi" class="cn.javass.spring.chapter2.helloworld.HelloImpl"/>
+    <bean id="helloApi" class="com.ligh.spring3.chapter2.helloworld.HelloImpl"/>
     <!-- 注意我们没有注入helloApi，所以测试时会报错 -->
     <bean id="bean" 
-          class="cn.javass.spring.chapter3.bean.HelloApiDecorator" 
+          class="com.ligh.spring3.chapter3.bean.HelloApiDecorator" 
           dependency-check="objects">
         <property name="message" value="Haha"/>
     </bean>

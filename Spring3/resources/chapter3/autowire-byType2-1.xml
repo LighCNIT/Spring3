@@ -8,11 +8,11 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
            
-    <bean class="cn.javass.spring.chapter2.helloworld.HelloImpl"/>
+    <bean class="com.ligh.spring3.chapter2.helloworld.HelloImpl"/>
     <!-- 从自动装配候选者中去除 -->
-    <bean class="cn.javass.spring.chapter2.helloworld.HelloImpl" autowire-candidate="false"/>
+    <bean class="com.ligh.spring3.chapter2.helloworld.HelloImpl" autowire-candidate="false"/>
     <bean id="bean" 
-          class="cn.javass.spring.chapter3.bean.HelloApiDecorator" 
+          class="com.ligh.spring3.chapter3.bean.HelloApiDecorator" 
           autowire="byType"/>
           
 </beans>

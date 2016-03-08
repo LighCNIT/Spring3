@@ -21,6 +21,7 @@ public class ThreadScopeTest {
         Assert.assertEquals(bean1, bean2);
     }
 
+    //创建两个线程测试，返回的是两个不同的bean
     @Test
     public void testTwoThread() throws InterruptedException {
         final BeanFactory beanFactory = new ClassPathXmlApplicationContext("chapter3/threadScope.xml");

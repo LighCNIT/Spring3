@@ -13,5 +13,8 @@
 	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/org.springframework.context-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/org.springframework.core-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/jboss-logging.jar"/>
+	<classpathentry kind="lib" path="F:/跟我学spring3-源码/spring/lib/jboss-vfs.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

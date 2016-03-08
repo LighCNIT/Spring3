@@ -5,8 +5,8 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="replacer" class="cn.javass.spring.chapter3.bean.PrinterReplacer"/>
-    <bean id="printer" class="cn.javass.spring.chapter3.bean.Printer">
+    <bean id="replacer" class="com.ligh.spring3.chapter3.bean.PrinterReplacer"/>
+    <bean id="printer" class="com.ligh.spring3.chapter3.bean.Printer">
         <replaced-method name="print" replacer="replacer">
             <arg-type>java.lang.String</arg-type>
         </replaced-method>

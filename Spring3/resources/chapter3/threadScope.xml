@@ -12,14 +12,14 @@
         <property name="scopes">
            <map><entry>
                    
-<!-- 指定scope关键字 -->  <key><value>thread</value></key>
+	<!-- 指定scope关键字 -->  <key><value>thread</value></key>
                    
-<!-- scope实现 -->        <bean class="cn.javass.spring.chapter3.ThreadScope"/>
+	<!-- scope实现 -->        <bean class="com.ligh.spring3.chapter3.ThreadScope"/>
          </entry></map>     
         </property>
     </bean>
    
     <!-- 定义依赖Bean -->
-    <bean id="helloApi" class="cn.javass.spring.chapter2.helloworld.HelloImpl" scope="thread"/>
+    <bean id="helloApi" class="com.ligh.spring3.chapter2.helloworld.HelloImpl" scope="thread"/>
    
 </beans>

@@ -220,14 +220,14 @@ public class DependencyInjectTest {
     
     @Test
     public void testLocalAndparentBeanInject() {
-        
+        //初始化父类容器
         ApplicationContext parentBeanContext = new ClassPathXmlApplicationContext("chapter3/parentBeanInject.xml");
-        
+        //初始化当前容器
         ApplicationContext beanContext = new ClassPathXmlApplicationContext(new String[] {"chapter3/localBeanInject.xml"}, parentBeanContext);
-        
+        //引用local bean
         HelloApi bean1 = beanContext.getBean("bean1", HelloApi.class);
         bean1.sayHello();
-        
+        //引用parent bean
         HelloApi bean2 = beanContext.getBean("bean2", HelloApi.class);
         bean2.sayHello();
     }
@@ -242,7 +242,7 @@ public class DependencyInjectTest {
         
     }
 
-    
+    //
     @Test
     public void testNavigationBeanInject() {
         ApplicationContext context = new ClassPathXmlApplicationContext("chapter3/navigationBeanInject.xml");

@@ -8,15 +8,15 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context-2.5.xsd" >
    
-   <bean id="circleA" class="cn.javass.spring.chapter3.bean.CircleA" scope="prototype">
+   <bean id="circleA" class="com.ligh.spring3.chapter3.bean.CircleA" scope="prototype">
         <property name="circleB" ref="circleB"/>
    </bean>
 
-   <bean id="circleB" class="cn.javass.spring.chapter3.bean.CircleB" scope="prototype">
+   <bean id="circleB" class="com.ligh.spring3.chapter3.bean.CircleB" scope="prototype">
        <property name="circleC" ref="circleC"/>
    </bean>
 
-   <bean id="circleC" class="cn.javass.spring.chapter3.bean.CircleC" scope="prototype">
+   <bean id="circleC" class="com.ligh.spring3.chapter3.bean.CircleC" scope="prototype">
        <property name="circleA" ref="circleA"/>
    </bean>
           

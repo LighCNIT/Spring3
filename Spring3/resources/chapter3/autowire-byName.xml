@@ -10,7 +10,7 @@
            
     <bean id="helloApi" class="com.ligh.spring3.chapter2.helloworld.HelloImpl"/>
 
-    <!-- 通过构造器注入 -->
+    
     <bean id="bean" 
           class="com.ligh.spring3.chapter3.bean.HelloApiDecorator" 
           autowire="byName"/>

@@ -18,6 +18,7 @@ public class AutowireBeanTest {
     public void testAutowireByName() throws IOException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("chapter3/autowire-byName.xml");
         HelloApi helloApi = context.getBean("bean", HelloApi.class);
+       // System.out.println(Class.class.getMethods());
         helloApi.sayHello();
     }
 

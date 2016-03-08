@@ -27,7 +27,8 @@ public class DependencyCheckTest {
         
         new ClassPathXmlApplicationContext("chapter3/dependency-check-all.xml");
     }
-
+    
+    @Test
     public void testDependencyCheckByNone() throws IOException {
         
         new ClassPathXmlApplicationContext("chapter3/dependency-check-none.xml");

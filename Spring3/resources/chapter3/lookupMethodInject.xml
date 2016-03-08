@@ -6,18 +6,18 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     
     <!-- prototype -->
-    <bean id="prototypePrinter" class="cn.javass.spring.chapter3.bean.Printer" scope="prototype"/>
+    <bean id="prototypePrinter" class="com.ligh.spring3.chapter3.bean.Printer" scope="prototype"/>
     <!-- singleton -->
-    <bean id="singletonPrinter" class="cn.javass.spring.chapter3.bean.Printer" scope="singleton"/>
+    <bean id="singletonPrinter" class="com.ligh.spring3.chapter3.bean.Printer" scope="singleton"/>
 
 
-    <bean id="helloApi1" class="cn.javass.spring.chapter3.HelloImpl5" scope="singleton">
+    <bean id="helloApi1" class="com.ligh.spring3.chapter3.HelloImpl5" scope="singleton">
         <property name="printer" ref="prototypePrinter"/>
         <lookup-method name="createPrototypePrinter" bean="prototypePrinter"/>
         <lookup-method name="createSingletonPrinter" bean="singletonPrinter"/>
     </bean>           
     
-    <bean id="helloApi2" class="cn.javass.spring.chapter3.HelloImpl5" scope="prototype">
+    <bean id="helloApi2" class="com.ligh.spring3.chapter3.HelloImpl5" scope="prototype">
         <property name="printer" ref="prototypePrinter"/>
         <lookup-method name="createPrototypePrinter" bean="prototypePrinter"/>
         <lookup-method name="createSingletonPrinter" bean="singletonPrinter"/>

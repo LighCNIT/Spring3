@@ -18,7 +18,7 @@ public class SingletonTest {
         
         ClassLoader classLoader = new SingletonClassLoader();
         
-        Class clazz = classLoader.loadClass("cn.javass.spring.chapter3.bean.Singleton");
+        Class clazz = classLoader.loadClass("com.ligh.spring3.chapter3.bean.Singleton");
         
         Method getInstance = clazz.getDeclaredMethod("getInstance");
         Object singletonObj = getInstance.invoke(clazz);
@@ -35,7 +35,7 @@ public class SingletonTest {
         
         ClassLoader classLoader2 = new SingletonClassLoader();
         
-        Class clazz2 = classLoader2.loadClass("cn.javass.spring.chapter3.bean.Singleton");
+        Class clazz2 = classLoader2.loadClass("com.ligh.spring3.chapter3.bean.Singleton");
         
         Method getInstance2 = clazz2.getDeclaredMethod("getInstance");
         Object singletonObj2 = getInstance2.invoke(clazz2);
@@ -46,7 +46,7 @@ public class SingletonTest {
         Integer counter2 = (Integer) counterField2.get(singletonObj2);
         counterField2.set(singletonObj2, counter2 + 1);
         
-        Assert.assertEquals(1, counterField2.get(singletonObj2));
+        Assert.assertEquals(2, counterField2.get(singletonObj2));
         System.out.println(counterField2.get(singletonObj2));
         
         
