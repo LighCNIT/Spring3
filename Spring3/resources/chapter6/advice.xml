@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="HelloWorldService"
+		class="com.ligh.spring3.chapter6.service.impl.HelloWorldServiceImpl" />
+
+	<bean id="aspect" class="com.ligh.spring3.chapter6.aop.HelloWorldAspect" />
+
+    <bean id="beforeAdvice" class="com.ligh.spring3.chapter6.aop.BeforeAdviceImpl" />
+
+	<aop:config>
+	    <aop:advisor pointcut="execution(* com.ligh.spring3..*.sayAdvisorBefore(..))"
+			advice-ref="beforeAdvice" />
+		<aop:aspect ref="aspect">
+			<aop:before
+				pointcut="execution(* com.ligh.spring3..*.sayBefore(..)) and args(param)"
+				method="beforeAdvice(java.lang.String)" arg-names="param" />
+			<aop:after-returning
+				pointcut="execution(* com.ligh.spring3..*.sayAfterReturning(..))"
+				method="afterReturningAdvice" arg-names="retVal" returning="retVal" />
+			<aop:after-throwing
+				pointcut="execution(* com.ligh.spring3..*.sayAfterThrowing(..))"
+				method="afterThrowingAdvice" arg-names="exception" throwing="exception" />
+			<aop:after pointcut="execution(* com.ligh.spring3..*.sayAfterFinally(..))"
+				method="afterFinallyAdvice" />
+
+			<aop:around pointcut="execution(* com.ligh.spring3..*.sayAround(..))"
+				method="aroundAdvice" />
+
+			<aop:declare-parents types-matching="com.ligh.spring3..*.IHelloWorldService+"
+				implement-interface="com.ligh.spring3.chapter6.service.IIntroductionService"
+				default-impl="com.ligh.spring3.chapter6.service.impl.IntroductiondService" />
+		</aop:aspect>
+	</aop:config>
+</beans>
